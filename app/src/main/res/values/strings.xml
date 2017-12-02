@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MTG Helper</string>
+    <string name="dec_sym">-</string>
+    <string name="starting_life">20</string>
+    <string name="inc_sym">+</string>
+    <string name="reset">Reset</string>
+</resources>
