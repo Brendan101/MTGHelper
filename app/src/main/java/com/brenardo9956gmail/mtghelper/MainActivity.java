@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 myhandler.post(new LifeWork(newLife, PLAYER_TWO));
                 break;
             case R.id.playerTwoDec:
-                newLife = Integer.parseInt(playerTwoLife.getText().toString()) + 1;
+                newLife = Integer.parseInt(playerTwoLife.getText().toString()) - 1;
                 myhandler.post(new LifeWork(newLife, PLAYER_TWO));
                 break;
             case R.id.resetButton:
