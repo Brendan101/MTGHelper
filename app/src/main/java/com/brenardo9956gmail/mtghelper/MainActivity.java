@@ -50,12 +50,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         
     }
 
-    public class LifeWork implements Runnable{
+    private class LifeWork implements Runnable{
 
         private int life, player;
-        boolean choice;
 
-        public LifeWork(int life, int player){
+        private LifeWork(int life, int player){
 
             this.life = life;
             this.player = player;
@@ -82,7 +81,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
 
-        int newLife = 0;
+        int newLife;
 
         switch(view.getId()){
 
