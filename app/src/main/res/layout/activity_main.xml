@@ -14,11 +14,11 @@
         android:layout_height="0dp"
         android:orientation="horizontal"
         android:layout_weight="2"
-        android:weightSum="3">
+        android:weightSum="4">
 
         <Button
             android:id="@+id/playerTwoDec"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
@@ -26,11 +26,11 @@
             android:text="@string/dec_sym"
             android:textAlignment="center"
             android:textColor="@android:color/holo_green_dark"
-            android:textSize="64sp" />
+            android:textSize="64sp"/>
 
         <TextView
             android:id="@+id/playerTwoLife"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:rotation="180"
             android:text="@string/starting_life"
@@ -39,12 +39,12 @@
             android:textColor="@android:color/holo_green_dark"
             android:textSize="128sp"
             android:textStyle="bold"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:layout_gravity="center_vertical"/>
 
         <Button
             android:id="@+id/playerTwoInc"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
@@ -52,7 +52,7 @@
             android:text="@string/inc_sym"
             android:textAlignment="center"
             android:textColor="@android:color/holo_green_dark"
-            android:textSize="64sp" />
+            android:textSize="64sp"/>
 
     </LinearLayout>
 
@@ -77,11 +77,11 @@
         android:layout_height="0dp"
         android:orientation="horizontal"
         android:layout_weight="2"
-        android:weightSum="3">
+        android:weightSum="4">
 
         <Button
             android:id="@+id/playerOneInc"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
@@ -93,7 +93,7 @@
 
         <TextView
             android:id="@+id/playerOneLife"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/starting_life"
             android:textAlignment="center"
@@ -101,12 +101,12 @@
             android:textColor="@android:color/holo_red_dark"
             android:textSize="128sp"
             android:textStyle="bold"
-            android:layout_weight="1"
+            android:layout_weight="2"
             android:layout_gravity="center_vertical"/>
 
         <Button
             android:id="@+id/playerOneDec"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="1"

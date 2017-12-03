@@ -25,6 +25,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button resetButton;
     Handler myhandler = new Handler();
 
+    int playerOneLifeCount;
+    int playerTwoLifeCount;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +50,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //other
         resetButton = (Button)findViewById(R.id.resetButton);
         resetButton.setOnClickListener(this);
+
+        playerOneLifeCount = STARTING_LIFE;
+        myhandler.post(new LifeWork(playerOneLifeCount, PLAYER_ONE));
+        playerTwoLifeCount = STARTING_LIFE;
+        myhandler.post(new LifeWork(playerTwoLifeCount, PLAYER_TWO));
         
     }
 
@@ -81,29 +89,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
 
-        int newLife;
-
         switch(view.getId()){
 
             case R.id.playerOneInc:
-                newLife = Integer.parseInt(playerOneLife.getText().toString()) + 1;
-                myhandler.post(new LifeWork(newLife, PLAYER_ONE));
+                playerOneLifeCount += 1;
+                myhandler.post(new LifeWork(playerOneLifeCount, PLAYER_ONE));
                 break;
             case R.id.playerOneDec:
-                newLife = Integer.parseInt(playerOneLife.getText().toString()) - 1;
-                myhandler.post(new LifeWork(newLife, PLAYER_ONE));
+                playerOneLifeCount -= 1;
+                myhandler.post(new LifeWork(playerOneLifeCount, PLAYER_ONE));
                 break;
             case R.id.playerTwoInc:
-                newLife = Integer.parseInt(playerTwoLife.getText().toString()) + 1;
-                myhandler.post(new LifeWork(newLife, PLAYER_TWO));
+                playerTwoLifeCount += 1;
+                myhandler.post(new LifeWork(playerTwoLifeCount, PLAYER_TWO));
                 break;
             case R.id.playerTwoDec:
-                newLife = Integer.parseInt(playerTwoLife.getText().toString()) - 1;
-                myhandler.post(new LifeWork(newLife, PLAYER_TWO));
+                playerTwoLifeCount -= 1;
+                myhandler.post(new LifeWork(playerTwoLifeCount, PLAYER_TWO));
                 break;
             case R.id.resetButton:
-                myhandler.post(new LifeWork(STARTING_LIFE, PLAYER_ONE));
-                myhandler.post(new LifeWork(STARTING_LIFE, PLAYER_TWO));
+                playerOneLifeCount = STARTING_LIFE;
+                myhandler.post(new LifeWork(playerOneLifeCount, PLAYER_ONE));
+                playerTwoLifeCount = STARTING_LIFE;
+                myhandler.post(new LifeWork(playerTwoLifeCount, PLAYER_TWO));
                 break;
         }
 
